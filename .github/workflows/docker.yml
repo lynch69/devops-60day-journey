@@ -15,7 +15,7 @@ jobs:
           uses: docker/setup-buildx-action@v3
 
         - name: Build Docker image
-          run: docker build -t docker-action-site
+          run: docker build -t docker-action-site .
 
         - name: Run Docker container
           run: docker run -d -p 8080:80 docker-action-site
